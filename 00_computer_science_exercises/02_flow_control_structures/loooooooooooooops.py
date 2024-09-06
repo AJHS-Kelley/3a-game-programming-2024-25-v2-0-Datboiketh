@@ -23,8 +23,12 @@
 #     print(eachfruit)
 
 # break Keyword -- Immediately exit loop
-fruits = ["tamato", "banana", "blueberry", "mango"]
-for eachfruit in fruits:
-    if eachfruit == "banana":
-        break
-    print(eachfruit)
+# fruits = ["tamato", "banana", "blueberry", "mango"]
+# for eachfruit in fruits:
+#     if eachfruit == "banana":
+#         break
+#     print(eachfruit)
+
+# for loops using range(). range(x) is EXCLUSIVE, it starte at 0 ends at x - 1
+for i in range(10): #range is 0-9
+    print(i) 
