@@ -1,7 +1,9 @@
 # Award extra lives, Keith Dinkins, V0.0
 
 lives = 3
-score = 1000000
+score = 100000
+name = "Keth"
+print(f"Hello{name}! You scored {score} points.\n")
 
 # allow the user to input the score as an integer
 
