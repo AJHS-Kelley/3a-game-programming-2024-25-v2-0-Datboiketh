@@ -1,6 +1,6 @@
 # Award extra lives, Keith Dinkins, V0.0
 
-lives = 3
+lives = 5
 score = 100
 name = "Keith"
 print(f"Hello{name}! You scored {score} points.\n")
@@ -8,7 +8,7 @@ print(f"Hello{name}! You scored {score} points.\n")
 # allow the user to input the score as an integer
 
 # allow user to input score
-if score <= 10000:
+if score < 10000:
     print("lose a life")
     lives -= 1
 elif score < 100001:
