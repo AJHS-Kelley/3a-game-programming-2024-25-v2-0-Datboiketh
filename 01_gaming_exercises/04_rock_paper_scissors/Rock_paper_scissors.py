@@ -1,4 +1,4 @@
-# Rock , Paper, Scissors Keith D. v0.3
+# Rock , Paper, Scissors Keith D. v0.4
 
 # MODULE IMPORTS
 import random
@@ -40,3 +40,28 @@ The CPU will select Rock, Paper, or Scissors.
 """)
 
 # MULTI-LINE STRINGS CAN BE USED AS COMMENTS
+
+
+
+
+
+
+# MAIN GAME LOOP
+while playerScore < 5 and cpuScore < 5:
+    print(f"{playerName}you have {playerScore} points. \nThe AI has {cpuScore} points.\n")
+    playerChoice = input("please enter rock paper, or scissors and enter. \n").lower()
+    if playerChoice != "rock" or playerChoice != "paper" or playerChoice != "scissors":
+        playerChoice = input("please enter rock paper, or scissors and enter. \n").lower()
+        if playerChoice != "rock" or playerChoice != "paper" or playerChoice != "scissors":
+            print("you are not following directions. Please try again\n")
+            exit()
+        print(f"you have chosen {playerChoice}.")
+    else:
+        print(f"you have chosen {playerChoice}.")
+
+
+
+    #Let cpu select choice at random
+    #compare player choice to cpu choice
+    #print results to the screen
+    #award point to winner
