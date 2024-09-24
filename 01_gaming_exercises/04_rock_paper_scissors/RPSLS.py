@@ -57,7 +57,7 @@ The CPU will select Rock, Paper, or Scissors.
 
 
 # MAIN GAME LOOP
-while playerScore < 10 and cpuScore < 10:
+while playerScore < 7 and cpuScore < 7:
     print(f"{playerName} you have {playerScore} points. \nThe AI has {cpuScore} points.\n")
     playerChoice = input("please enter rock paper, scissors, Lizard, or Spock and enter. \n").lower()
     if playerChoice != "rock" and playerChoice != "paper" and playerChoice != "scissors" and playerChoice != "lizard" and playerChoice != "spock":
