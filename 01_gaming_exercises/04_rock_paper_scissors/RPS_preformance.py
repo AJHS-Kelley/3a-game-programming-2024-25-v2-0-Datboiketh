@@ -46,12 +46,14 @@ while loopCount < loopsReq:
     if playerChoice == "rock" and cpuChoice == "paper":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
         print("The AI wins a point")
-        cpuScore += 1
+        #cpuScore += 1
+        cpuScore = cpuScore + 1
     # cpu wins
     elif playerChoice == "rock" and cpuChoice == "scissors":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
         print("You win a point")
-        playerScore += 1
+        #playerScore += 1
+        playerScore = playerScore + 1
     #player wins
     elif playerChoice == "rock" and cpuChoice == "rock":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
@@ -61,11 +63,13 @@ while loopCount < loopsReq:
     elif playerChoice == "paper" and cpuChoice == "scissors":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
         print("The AI wins a point")
-        cpuScore += 1
+        #cpuScore += 1
+        cpuScore = cpuScore + 1
     elif playerChoice == "paper" and cpuChoice == "rock":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
         print("You win a point")
-        playerScore += 1
+        #playerScore += 1
+        playerScore = playerScore + 1
     elif playerChoice == "paper" and cpuChoice == "paper":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
         print("It's a draw")
@@ -73,11 +77,13 @@ while loopCount < loopsReq:
     elif playerChoice == "scissors" and cpuChoice == "rock":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
         print("The AI wins a point")
-        cpuScore += 1
+        #cpuScore += 1
+        cpuScore = cpuScore + 1
     elif playerChoice == "scissors" and cpuChoice == "paper":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
         print("You win a point")
-        playerScore += 1
+        #playerScore += 1
+        playerScore = playerScore + 1
     elif playerChoice == "scissors" and cpuChoice == "scissors":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
         print("It's a draw")
