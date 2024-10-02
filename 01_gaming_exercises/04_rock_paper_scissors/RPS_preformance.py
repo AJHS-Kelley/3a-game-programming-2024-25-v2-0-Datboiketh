@@ -43,19 +43,7 @@ while loopCount < loopsReq:
         print("unable to determine AI choice. \nPlease restart")
         exit()
     # compare player choice to cpu choice
-    if playerChoice == "scissors" and cpuChoice == "scissors":
-        print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
-        print("It's a draw")
-        numDraws += 1
-    elif playerChoice == "paper" and cpuChoice == "paper":
-        print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
-        print("It's a draw")
-        numDraws += 1
-    elif playerChoice == "rock" and cpuChoice == "rock":
-        print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
-        print("It's a draw")
-        numDraws += 1
-    elif playerChoice == "rock" and cpuChoice == "paper":
+    if playerChoice == "rock" and cpuChoice == "paper":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
         print("The AI wins a point")
         cpuScore += 1
@@ -89,6 +77,18 @@ while loopCount < loopsReq:
         print("You win a point")
         playerScore += 1
         #playerScore = playerScore + 1
+    elif playerChoice == "scissors" and cpuChoice == "scissors":
+        print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
+        print("It's a draw")
+        numDraws += 1
+    elif playerChoice == "paper" and cpuChoice == "paper":
+        print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
+        print("It's a draw")
+        numDraws += 1
+    elif playerChoice == "rock" and cpuChoice == "rock":
+        print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
+        print("It's a draw")
+        numDraws += 1
     loopCount += 1
     #print results to the
     #award point to winner
