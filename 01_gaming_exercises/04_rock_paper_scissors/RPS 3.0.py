@@ -18,40 +18,33 @@ def playerName(): #function signiture -- name of function, (arguments if any)
     print(f"Hello {playerName}!")
     isCorrect = input("Is this correct? Type yes or no and press enter. \n").lower()
 
-    # .lower() turns all into lower case
-    # .upper() turns all into upper case
-
     if isCorrect == "yes": 
         print(f"Ok {playerName}, let's play, Rock, Paper, Scissors!")
     else:
         playerName = input("Type your name and press enter.\n")
+    return playerName
 
 # CALLING THE FUNCTION
-playerName()        
+playerName = playerName()        
 
-print(f"""
-Welcome {playerName} to the Rock, Paper, Scissors Robot!
-It's time to play  Rock, Paper, Scissors!
+def rules():
 
-You will play agasint an AI. the first one to score 5 points wins.
-You will select from Rock, Paper or scissors.
-The AI will select Rock, Paper, or Scissors.
+    print(f"""
+    Welcome {playerName} to the Rock, Paper, Scissors Robot!
+    It's time to play  Rock, Paper, Scissors!
 
-1) Rock Demolishes Scissors
-2) Scissors Slices Paper
-3) Paper Consumes Rock
-""")
+    You will play agasint an AI. the first one to score 5 points wins.
+    You will select from Rock, Paper or scissors.
+    The AI will select Rock, Paper, or Scissors.
 
-# MULTI-LINE STRINGS CAN BE USED AS COMMENTS
-
-
-
-
-
-
-# MAIN GAME LOOP
-while playerScore < 5 and cpuScore < 5:
-    print(f"{playerName}you have {playerScore} points. \nThe AI has {cpuScore} points.\n")
+    1) Rock Demolishes Scissors
+    2) Scissors Slices Paper
+    3) Paper Consumes Rock
+    """)
+    # does another part of this need to acces this info
+    # IF YES, YOU MUST HAVE A return STATEMENT
+    # IF NO, A return STATEMENT IS NOT REQUIRED
+def playerChoice():
     playerChoice = input("please enter rock paper, or scissors and enter. \n").lower()
     if playerChoice != "rock" and playerChoice != "paper" and playerChoice != "scissors":
         playerChoice = input("please enter rock paper, or scissors and enter. \n").lower()
@@ -61,7 +54,9 @@ while playerScore < 5 and cpuScore < 5:
         print(f"you have chosen {playerChoice}.")
     else:
         print(f"you have chosen {playerChoice}.")
-    #Let cpu select choice at random
+    return playerChoice
+
+def cpuChoice():
     cpuChoice = random.randint(0,2) # RANDOMLY SECTE 0,1, OR 2.
     if cpuChoice == 0:
         cpuChoice = "rock"
@@ -73,6 +68,13 @@ while playerScore < 5 and cpuScore < 5:
         print("unable to determine AI choice. \nPlease restart")
         exit()
     print(f"AI Choice: {cpuChoice}")
+    return cpuChoice
+
+# MAIN GAME LOOP
+while playerScore < 5 and cpuScore < 5:
+    print(f"{playerName}you have {playerScore} points. \nThe AI has {cpuScore} points.\n")
+    #Let cpu select choice at random
+    
     # compare player choice to cpu choice
     if playerChoice == "rock" and cpuChoice == "paper":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
