@@ -1,6 +1,5 @@
 # Rock , Paper, Scissors Keith D. v3.0.
 
-
 # MODULE IMPORTS
 import random
 
@@ -14,30 +13,33 @@ cpuScore = 0
 cpuChoice = None
 
 #PLAYER NAME INPUT
-playerName = input("Type name and press enter.\n")
-print(f"Hello {playerName}!")
-isCorrect = input("Is this correct? Type yes or no and press enter. \n").lower()
+def playerName(): #function signiture -- name of function, (arguments if any)
+    playerName = input("Type name and press enter.\n")
+    print(f"Hello {playerName}!")
+    isCorrect = input("Is this correct? Type yes or no and press enter. \n").lower()
 
-# .lower() turns all into lower case
-# .upper() turns all into upper case
+    # .lower() turns all into lower case
+    # .upper() turns all into upper case
 
-if isCorrect == "yes": 
-    print(f"Ok {playerName}, let's play, Rock, Paper, Scissors!")
-else:
-    playerName = input("Type your name and press enter.\n")
+    if isCorrect == "yes": 
+        print(f"Ok {playerName}, let's play, Rock, Paper, Scissors!")
+    else:
+        playerName = input("Type your name and press enter.\n")
 
-# THE RULES
+# CALLING THE FUNCTION
+playerName()        
+
 print(f"""
 Welcome {playerName} to the Rock, Paper, Scissors Robot!
 It's time to play  Rock, Paper, Scissors!
 
 You will play agasint an AI. the first one to score 5 points wins.
 You will select from Rock, Paper or scissors.
-The CPU will select Rock, Paper, or Scissors.
+The AI will select Rock, Paper, or Scissors.
 
 1) Rock Demolishes Scissors
 2) Scissors Slices Paper
-3)Paper Consumes Rock
+3) Paper Consumes Rock
 """)
 
 # MULTI-LINE STRINGS CAN BE USED AS COMMENTS
