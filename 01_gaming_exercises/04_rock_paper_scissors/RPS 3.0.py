@@ -1,4 +1,4 @@
-# Rock , Paper, Scissors Keith D. v3.0
+# Rock , Paper, Scissors Keith D. v3.0.
 
 
 # MODULE IMPORTS
