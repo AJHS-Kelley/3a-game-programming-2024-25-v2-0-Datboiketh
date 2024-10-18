@@ -1,4 +1,4 @@
-# Rock , Paper, Scissors Keith D. v3.0.
+# Rock , Paper, Scissors Keith D. v3.1.
 
 # MODULE IMPORTS
 import random
@@ -46,6 +46,7 @@ def rules() -> None:
     # does another part of this need to acces this info
     # IF YES, YOU MUST HAVE A return STATEMENT
     # IF NO, A return STATEMENT IS NOT REQUIRED
+
 def playerChoice() -> str:
     """allows player to choose rock, paper, or scissors."""
     playerChoice = input("please enter rock paper, or scissors and enter. \n").lower()
@@ -74,48 +75,66 @@ def cpuChoice() -> str:
     print(f"AI Choice: {cpuChoice}")
     return cpuChoice
 
-# MAIN GAME LOOP
-while playerScore < 5 and cpuScore < 5:
-    print(f"{playerName}you have {playerScore} points. \nThe AI has {cpuScore} points.\n")
-    #Let cpu select choice at random
-    
-    # compare player choice to cpu choice
+def pickwinner(playerChoice: str, cpuChoice: str) -> str: # playerChoice and cpuChoice are both arguments
+    """Determines the winner using player and CPU choices."""
     if playerChoice == "rock" and cpuChoice == "paper":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
         print("The AI wins a point")
         cpuScore += 1
+        return "CPU wins"
     # cpu wins
     elif playerChoice == "rock" and cpuChoice == "scissors":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
         print("You win a point")
         playerScore += 1
+        return "Player wins"
     #player wins
     elif playerChoice == "rock" and cpuChoice == "rock":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
         print("It's a draw")
+        return "Draw"
     # draw
     elif playerChoice == "paper" and cpuChoice == "scissors":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
         print("The AI wins a point")
         cpuScore += 1
+        return "CPU wins"
     elif playerChoice == "paper" and cpuChoice == "rock":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
         print("You win a point")
         playerScore += 1
+        return "Player wins"
     elif playerChoice == "paper" and cpuChoice == "paper":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
         print("It's a draw")
+        return "Draw"
     elif playerChoice == "scissors" and cpuChoice == "rock":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
         print("The AI wins a point")
         cpuScore += 1
+        return "CPU wins"
     elif playerChoice == "scissors" and cpuChoice == "paper":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
         print("You win a point")
         playerScore += 1
+        return "Player wins"
     elif playerChoice == "scissors" and cpuChoice == "scissors":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
         print("It's a draw")
+        return "Draw"
+    # return statements immediately exit a function
+
+
+# MAIN GAME LOOP
+while playerScore < 5 and cpuScore < 5:
+    print(f"{playerName}you have {playerScore} points. \nThe AI has {cpuScore} points.\n")
+    
+    #Let cpu select choice at random
+
+    
+    
+    # compare player choice to cpu choice
+    
     #print results to the
     #award point to winner
         
