@@ -1,4 +1,4 @@
-# Rock , Paper, Scissors Keith D. v3.1.
+# Rock , Paper, Scissors Keith D. v3.2.
 
 # MODULE IMPORTS
 import random
@@ -124,19 +124,21 @@ def pickwinner(playerChoice: str, cpuChoice: str) -> str: # playerChoice and cpu
         return "Draw"
     # return statements immediately exit a function
 
+def score(winner:str) -> int:
+    """this function uses the winner to update the score for cpu, num, draws, and player score"""
+    if winner == "player wins":
+        score = 1
+    elif winner == "CPU wins":
+        score = 1
+    else: #draw
+        score = 0
+    return score
+
+
 
 # MAIN GAME LOOP
 while playerScore < 5 and cpuScore < 5:
     print(f"{playerName}you have {playerScore} points. \nThe AI has {cpuScore} points.\n")
-    
-    #Let cpu select choice at random
-
-    
-    
-    # compare player choice to cpu choice
-    
-    #print results to the
-    #award point to winner
         
 print(f"Your final score: {playerScore}\nAI final score: {cpuScore}.\n")
 if playerScore > cpuScore:
