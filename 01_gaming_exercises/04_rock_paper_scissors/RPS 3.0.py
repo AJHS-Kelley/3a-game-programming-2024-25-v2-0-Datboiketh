@@ -75,7 +75,7 @@ def cpuChoice() -> str:
     print(f"AI Choice: {cpuChoice}")
     return cpuChoice
 
-def pickwinner(playerChoice: str, cpuChoice: str) -> str: # playerChoice and cpuChoice are both arguments
+def pickWinner(playerChoice: str, cpuChoice: str) -> str: # playerChoice and cpuChoice are both arguments
     """Determines the winner using player and CPU choices."""
     if playerChoice == "rock" and cpuChoice == "paper":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
@@ -148,4 +148,20 @@ def matchwinner(playerScore: int, cpuScore: int) -> bool:
 
 
 def playGame(playerScore: int, cpuScore: int) -> None:
-    
+    """This funstion will use all other functions to play Rock, Paper, Scissors."""
+    while True:
+        cpuPick = cpuChoice()
+        playerPick = playerChoice()
+        roundWinner = pickWinner(playerPick, cpuPick)
+        if roundWinner == "Player Wins":
+            playerScore += score(roundWinner)
+        if roundWinner == "CPU Wins":
+            cpuScore += score(roundWinner)
+        
+        print(f"Player Score: {playerScore}\n")
+        print(f"CPU Score: {cpuScore}\n")
+
+        if matchwinner(playerScore, cpuScore) == True:
+            break
+
+playGame(playerScore, cpuScore)
