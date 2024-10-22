@@ -135,16 +135,17 @@ def score(winner:str) -> int:
     return score
 
 
+def matchwinner(playerScore: int, cpuScore: int) -> bool:
+    """ This function determines if a player has won the game or not by scoring 5 points."""
+    if playerScore >= 5:
+        print("Congrats! You win.\n")
+        return True
+    elif cpuScore >= 5:
+        print("This is kinda sad you lost to a CPU.\n")
+        return True
+    else: #No winner yet
+        return False
 
-# MAIN GAME LOOP
-while playerScore < 5 and cpuScore < 5:
-    print(f"{playerName}you have {playerScore} points. \nThe AI has {cpuScore} points.\n")
-        
-print(f"Your final score: {playerScore}\nAI final score: {cpuScore}.\n")
-if playerScore > cpuScore:
-    print(f"Congratulations {playerName},you win big dawg")
-elif cpuScore > playerScore:
-    print(f"The AI wins. you are really bad at this get better man")
-else:
-    print("unable to determine a winner. \n please restart")
-    exit()
+
+def playGame(playerScore: int, cpuScore: int) -> None:
+    
