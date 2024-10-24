@@ -80,13 +80,11 @@ def pickWinner(playerChoice: str, cpuChoice: str) -> str: # playerChoice and cpu
     if playerChoice == "rock" and cpuChoice == "paper":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
         print("The AI wins a point")
-        cpuScore += 1
         return "CPU wins"
     # cpu wins
     elif playerChoice == "rock" and cpuChoice == "scissors":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
         print("You win a point")
-        playerScore += 1
         return "Player wins"
     #player wins
     elif playerChoice == "rock" and cpuChoice == "rock":
@@ -97,12 +95,10 @@ def pickWinner(playerChoice: str, cpuChoice: str) -> str: # playerChoice and cpu
     elif playerChoice == "paper" and cpuChoice == "scissors":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
         print("The AI wins a point")
-        cpuScore += 1
         return "CPU wins"
     elif playerChoice == "paper" and cpuChoice == "rock":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
         print("You win a point")
-        playerScore += 1
         return "Player wins"
     elif playerChoice == "paper" and cpuChoice == "paper":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
@@ -111,20 +107,20 @@ def pickWinner(playerChoice: str, cpuChoice: str) -> str: # playerChoice and cpu
     elif playerChoice == "scissors" and cpuChoice == "rock":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
         print("The AI wins a point")
-        cpuScore += 1
         return "CPU wins"
     elif playerChoice == "scissors" and cpuChoice == "paper":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
         print("You win a point")
-        playerScore += 1
         return "Player wins"
     elif playerChoice == "scissors" and cpuChoice == "scissors":
         print(f"The AI chose {cpuChoice} and you chose {playerChoice}. \n")
         print("It's a draw")
         return "Draw"
+    else:
+        print("Unable to determine a winner")
     # return statements immediately exit a function
 
-def score(winner:str) -> int:
+def score(winner: str) -> int:
     """this function uses the winner to update the score for cpu, num, draws, and player score"""
     if winner == "player wins":
         score = 1
@@ -135,7 +131,7 @@ def score(winner:str) -> int:
     return score
 
 
-def matchwinner(playerScore: int, cpuScore: int) -> bool:
+def matchWinner(playerScore: int, cpuScore: int) -> bool:
     """ This function determines if a player has won the game or not by scoring 5 points."""
     if playerScore >= 5:
         print("Congrats! You win.\n")
@@ -161,7 +157,7 @@ def playGame(playerScore: int, cpuScore: int) -> None:
         print(f"Player Score: {playerScore}\n")
         print(f"CPU Score: {cpuScore}\n")
 
-        if matchwinner(playerScore, cpuScore) == True:
+        if matchWinner(playerScore, cpuScore) == True:
             break
 
 playGame(playerScore, cpuScore)
