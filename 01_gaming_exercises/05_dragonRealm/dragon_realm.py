@@ -16,7 +16,7 @@ def displayIntro():
 def chooseLocation():
     playerChoice = ''
     while playerChoice != '1' and playerChoice != '2'and playerChoice != '3':
-        print('Will go into cave 1, cave 2 or the desert (1, 2, or 3)')
+        print('Will go into cave 1, cave 2, or the desert (1, 2, or 3)')
         playerChoice = input()
     return playerChoice
 
@@ -37,15 +37,21 @@ def checkCave(chosenCave):
     else:
         print('Gobbles you down in one bite!')
 
-def choseDesert(chosenDesert):
+# def checkDesert(chosenDesert):
     print('You walked to the desert.')
     time.sleep(2)
     print('Its very hot and dry')
     time.sleep(2)
+    print('A troll pops out of no where')
+    time.sleep(2)
 
-    chosenDesert = random.randint(1,2)
+    randomTroll = random.randint(1,2)
 
-    if chosenDesert == str()
+    if chosenCave == str(randomTroll):
+        print('the troll hands you a sword')
+    
+    else:
+        print('the troll attacks you')
 
 playAgain = 'yes'
 
