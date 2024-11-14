@@ -18,29 +18,38 @@ def displayIntro():
 def chooseLocation():
     path = ''
     while path != '1' and path != '2':
-        print('Which path will you go down (1 or 2)')
-        path = input()
+        path = input('Will go down path 1 to the cave or path 2 to the desert?\n (Enter 1 or 2):') # Add a description for 1 and 2 
     return path
 
-def checkPath(chosenpath):
+def pathCave():
     
-    if path == '1':
-        print('You walk down the path...\n')
+    print('You walk down the path to the cave\n')
     time.sleep(2)
-    print('You go into the cave...\n')
+    print('You enter the cave with the little bit of courage you have.\n')
     time.sleep(2)
-    print('Its Dark and Spooky...\n')
+    print('Its Dark and Scary...\n')
     time.sleep(2)
     print('A Dragon apears out of nowhere and...\n')
     time.sleep(2)
 
     friendlyCave = random.randint(1, 2)
 
-    if chosenpath == str(friendlyCave):
-        print('Gives you his treasure!')
+    if chosenPath == str(friendlyCave):
+        print('Gives you a sword')
 
     else:
         print('Gobbles you down in one bite!')
+    return friendlyCave
+
+def pathDesert():
+    
+    print('You walk down the path to the desert, it is very hot and dry.\n')
+    time.sleep(1)
+    print('As you continue to walk through the heat, you start to feel dizzy.\n')
+    time.sleep(1)
+    print('You notice a town in the far distance.\n')
+    time.sleep(2)
+    choice = input('Do you walk to the village or Keep going along the path\n')
 
 
 
@@ -48,7 +57,16 @@ playAgain = 'yes'
 
 while playAgain == 'yes' or playAgain == 'y':
     displayIntro()
-    caveNumber = chooseLocation()
-    checkPath(caveNumber)
+    chosenPath = chooseLocation()
+    if chosenPath == '1': #cave
+        pathCave()
+    else:
+        pathDesert()
+        
     print('Do you want to play again? (yes or no)')
     playAgain = input()
+
+
+
+
+
