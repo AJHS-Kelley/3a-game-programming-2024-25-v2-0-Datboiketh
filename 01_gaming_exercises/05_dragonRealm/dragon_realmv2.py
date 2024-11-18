@@ -5,7 +5,7 @@ import random, time, datetime
 
 # SAVEING A FILE
 # Step 1 creating the file name to use
-logFileName = "dragonRealmlog" + str(time.time()) + ".txt"
+logFileName = "dragonRealmlog"
 # logFileName = "dragoRealmlog.txt"
 # example dragonRealmLog 11:32.txt
 
@@ -17,7 +17,15 @@ saveData = open(logFileName, "a")
 # "a" CREATES FILE, IF FILE EXIST, APPEND DATA TO THE FILE.
 saveData.write("GAME STARTED" + " " + str(datetime.datetime.now()) + "\n")
 
-
+itemsChosen = 0
+hasWaterBottle = False
+hasSheild = False
+hasSword = False
+hasOnion = False
+while itemsChosen < 2:
+    itemsChosen = input('Before you go out on a adventure you have to have your gear, Please select 2 items you would like to take.\n [1]Waterbottle \n [2]Sheild \n [3]')
+    if itemsChosen == '1':
+        hasWaterBottle = True
 def displayIntro():
 
     print('Greetings traveler you will be going on an Adventure through Adventure valley,') 
@@ -41,7 +49,7 @@ def pathCave():
     time.sleep(2)
     print('You enter the cave with the little bit of courage you have.\n')
     time.sleep(2)
-    print('Its Dark and Scary...\n')
+    print('Its Dark and Scary, so scary that youre shivering in your boots\n')
     time.sleep(2)
     print('A Dragon apears out of nowhere and...\n')
     time.sleep(2)
@@ -49,7 +57,7 @@ def pathCave():
     friendlyCave = random.randint(1, 2)
 
     if chosenPath == str(friendlyCave):
-        print('Gives you a sword')
+        print('Burns you with his fire breath')
 
     else:
         print('Gobbles you down in one bite!')
@@ -82,6 +90,7 @@ while playAgain == 'yes' or playAgain == 'y':
 
 
 # CLOSE THE FILE
+saveData.write("END OF GAME LOG\n\n")
 saveData.close()
 
 
