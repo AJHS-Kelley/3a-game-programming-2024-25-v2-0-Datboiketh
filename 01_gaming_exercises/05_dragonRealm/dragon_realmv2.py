@@ -1,8 +1,22 @@
 # Dragon Realm, <STUDENT_NAME>, v0.0
 # Based on https://inventwithpython.com/chapter6.html by Al Sweigart
 
-import random
-import time
+import random, time, datetime
+
+# SAVEING A FILE
+# Step 1 creating the file name to use
+logFileName = "dragonRealmlog" + str(time.time()) + ".txt"
+# logFileName = "dragoRealmlog.txt"
+# example dragonRealmLog 11:32.txt
+
+# step 2 -- create /. open the file to save data.
+saveData = open(logFileName, "a") 
+# FILE MODES
+# "x" CREATES FILE, IF FILE EXIST, EXIT WITH MESSAGE.
+# "w" CREATES FILE, IF FILE EXIST, ERASE AND OVERWRITE FILE CONTENTS
+# "a" CREATES FILE, IF FILE EXIST, APPEND DATA TO THE FILE.
+saveData.write("GAME STARTED" + " " + str(datetime.datetime.now()) + "\n")
+
 
 def displayIntro():
 
@@ -67,6 +81,7 @@ while playAgain == 'yes' or playAgain == 'y':
     playAgain = input()
 
 
-
+# CLOSE THE FILE
+saveData.close()
 
 
