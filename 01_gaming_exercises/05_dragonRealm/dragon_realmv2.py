@@ -1,11 +1,11 @@
-# Dragon Realm, <STUDENT_NAME>, v0.0
+# Dragon Realm, <STUDENT_NAME>, v0.0 <-- UPDATE YOUR NAME AND VERSION NUMBER 
 # Based on https://inventwithpython.com/chapter6.html by Al Sweigart
-
+# Good progress so far, keep going on the project.  
 import random, time, datetime
 
 # SAVEING A FILE
 # Step 1 creating the file name to use
-logFileName = "dragonRealmlog"
+logFileName = "dragonRealmlog.txt"
 # logFileName = "dragoRealmlog.txt"
 # example dragonRealmLog 11:32.txt
 
@@ -15,6 +15,7 @@ saveData = open(logFileName, "a")
 # "x" CREATES FILE, IF FILE EXIST, EXIT WITH MESSAGE.
 # "w" CREATES FILE, IF FILE EXIST, ERASE AND OVERWRITE FILE CONTENTS
 # "a" CREATES FILE, IF FILE EXIST, APPEND DATA TO THE FILE.
+
 saveData.write("GAME STARTED" + " " + str(datetime.datetime.now()) + "\n")
 
 itemsChosen = 0
@@ -56,7 +57,7 @@ def pathCave():
 
     friendlyCave = random.randint(1, 2)
 
-    if chosenPath == str(friendlyCave):
+    if chosenPath == str(friendlyCave): # If this is the friendly cave, why am I getting burned to death?
         print('Burns you with his fire breath')
 
     else:
