@@ -22,10 +22,18 @@ hasWaterBottle = False
 hasSheild = False
 hasSword = False
 hasOnion = False
+
 while itemsChosen < 2:
-    itemsChosen = input('Before you go out on a adventure you have to have your gear, Please select 2 items you would like to take.\n [1]Waterbottle \n [2]Sheild \n [3]')
+    itemsChosen = input('Before you go out on a adventure you have to have your gear, Please select 2 items you would like to take.\n [1]Waterbottle \n [2]Sheild \n [3]Sword \n')
     if itemsChosen == '1':
         hasWaterBottle = True
+    elif itemsChosen == '2':
+        hasSheild = True
+    elif itemsChosen == '3':
+        hasSword = True
+    elif itemsChosen == '4':
+        hasOnion = True
+
 def displayIntro():
 
     print('Greetings traveler you will be going on an Adventure through Adventure valley,') 
