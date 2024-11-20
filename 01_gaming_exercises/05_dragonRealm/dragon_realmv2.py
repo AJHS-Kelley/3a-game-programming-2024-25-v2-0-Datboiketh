@@ -34,7 +34,7 @@ while itemsChosen < 2:
         hasSword = True
     elif itemsChosen == '4':
         hasOnion = True
-
+    else
 def displayIntro():
 
     print('Greetings traveler you will be going on an Adventure through Adventure valley,') 
