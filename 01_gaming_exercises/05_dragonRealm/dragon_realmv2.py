@@ -91,15 +91,25 @@ def pathCave():
         print('Gobbles you down in one bite!')
     return friendlyCave
 
-def pathDesert():
-    
+def pathDesert(hasWaterBottle: bool) -> bool:
+    alive = True
     print('You walk down the path to the desert, it is very hot and dry.\n')
     time.sleep(1)
     print('As you continue to walk through the heat, you start to feel dizzy.\n')
     time.sleep(1)
     print('You notice a town in the far distance.\n')
     time.sleep(2)
-    choice = input('Do you walk to the village or Keep going along the path\n')
+    choice = input('Do you walk to the Town (yes or no)\n')
+    if choice == 'yes' and hasWaterBottle:
+        print('You walk to the town')
+        time.sleep(2)
+        print('while youre walking you remember your waterbottle and drink some')
+        time.sleep(2)
+        print('After you drink it you notice the town dissapears')
+        time.sleep(2)
+        print('Turns out it was a hallucination and so you contiue on your adventure')
+
+
 
 
 
