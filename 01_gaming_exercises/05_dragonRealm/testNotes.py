@@ -1,6 +1,4 @@
-import datetime
+pieces = ["king", "queen", "rook", "bishop", "knight","pawn"]
+pieces.sort()
 
-log_time = datetime.datetime.today()
-
-print("entry time: ",log_time)
-
+print(pieces[-1])
