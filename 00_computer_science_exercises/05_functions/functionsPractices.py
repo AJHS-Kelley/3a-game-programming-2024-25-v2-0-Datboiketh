@@ -38,4 +38,22 @@ argument1 = random.randint(-1000, 1000)
     
 def isEven(argument1: int) -> bool: 
     """Determines if interger value is even or odd."""
-if argument1 % 2 == ?: 
+    if argument1 % 2 == 0:
+        return True
+    else:
+        return False
+
+print(isEven(argument1))
+
+#Function with multiple arguments
+def canRideRollerCoaster(age: int, height: int) -> bool:
+    if age > 10 and height > 4:
+        print("you can ride.\n")
+        return True
+    else:
+        print("you cannot ride.\n")
+        return False
+canRideRollerCoaster(4,10) #arguments must be passed in the dame order as the function signature indicates.
+
+
+

@@ -18,27 +18,40 @@ saveData = open(logFileName, "a")
 
 saveData.write("GAME STARTED" + " " + str(datetime.datetime.now()) + "\n")
 
-itemsChosen = 0
+numItems = 0
 hasWaterBottle = False
 hasSheild = False
 hasSword = False
 hasOnion = False
 
-while itemsChosen < 2:
-    itemsChosen = input('Before you go out on a adventure you have to have your gear, Please select 2 items you would like to take.\n [1]Waterbottle \n [2]Sheild \n [3]Sword \n')
-    if itemsChosen == '1':
-        hasWaterBottle = True
-    elif itemsChosen == '2':
-        hasSheild = True
-    elif itemsChosen == '3':
-        hasSword = True
-    elif itemsChosen == '4':
-        hasOnion = True
-    else:
-        print('You have to pick one of the selected items')
+while numItems < 2:
+        itemsChosen = input('Before you go out on a adventure you have to have your gear, Please select 2 items you would like to take.\n [1]Waterbottle \n [2]Sheild \n [3]Sword \nEnter Choice Here:')
+        if itemsChosen == '1':
+            hasWaterBottle = True
+            print('You now have the waterbottle now you can hydrate\n')
+            time.sleep(1) 
+            numItems += 1
+        elif itemsChosen == '2':
+            hasSheild = True
+            print('Good now you can parry attacks\n')
+            time.sleep(1) 
+            numItems+= 1
+        elif itemsChosen == '3':
+            hasSword = True
+            print('Now you can ruthlesly kill innocents\n')
+            time.sleep(1) 
+            numItems += 1
+        elif itemsChosen == '4':
+            hasOnion = True
+            print('You got an onion idk how that will help but sure\n')
+            time.sleep(1) 
+            numItems += 1
+        else:
+            print('you gotta take something or else you might die man\n')
+            time.sleep(2)
 
 
-    
+
 def displayIntro():
 
     print('Greetings traveler you will be going on an Adventure through Adventure valley,') 
@@ -49,6 +62,8 @@ def displayIntro():
     print('You notice 2 paths one leading to a Dark and Scary Cave')
     print('while the other leads to a Dry and Hot Desert\n')
     time.sleep(1)
+
+    
 
 def chooseLocation():
     path = ''
