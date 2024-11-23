@@ -59,11 +59,10 @@ def displayIntro():
     print('Your goal is to make to Far Far Away Land without dying.\n')
     time.sleep(2)
 
+
     print('You notice 2 paths one leading to a Dark and Scary Cave')
     print('while the other leads to a Dry and Hot Desert\n')
     time.sleep(1)
-
-    
 
 def chooseLocation():
     path = ''
@@ -91,26 +90,89 @@ def pathCave():
         print('Gobbles you down in one bite!')
     return friendlyCave
 
-def pathDesert(hasWaterBottle: bool) -> bool:
-    alive = True
+def pathDesert(hasWaterBottle, hasOnion:bool ) -> bool:
+    
     print('You walk down the path to the desert, it is very hot and dry.\n')
     time.sleep(1)
     print('As you continue to walk through the heat, you start to feel dizzy.\n')
     time.sleep(1)
     print('You notice a town in the far distance.\n')
     time.sleep(2)
-    choice = input('Do you walk to the Town (yes or no)\n')
-    if choice == 'yes' and hasWaterBottle:
-        print('You walk to the town')
+    choice = input('Will you walk to the Town? (yes or no)\n')
+    if choice and hasWaterBottle == 'yes':
+        print('You walk to the Town')
         time.sleep(2)
-        print('while youre walking you remember your waterbottle and drink some')
+        print('While you walk to the town, you remember your waterbottle and you take a sip.\n')
         time.sleep(2)
-        print('After you drink it you notice the town dissapears')
+        print('The town slowly fades away, it turned out to be a mirage.\n')
         time.sleep(2)
-        print('Turns out it was a hallucination and so you contiue on your adventure')
-
-
-
+        print("Aren't you glad you chose the waterbottle, anyways you continue throught the hot desert.\n")
+        time.sleep(2)
+        print('As you walk you feel the ground begin to rumble.\n')
+        time.sleep(2)
+        print('All of a sudden a sandworm leaps over your head, you see a sign that say "Worm Valley"\n')
+        time.sleep(2)
+        print("You now trembling begin to realize the adventure you're taking, but then you rember your goal\n")
+        time.sleep(2)
+        print('You stop your trembling and contiue along the path\n')
+        time.sleep(2)
+        print('As you continue you see your destination in the distance\n')
+        time.sleep(2)
+        print('you walk to the kingdom gates but you notice dont have the secret item to get in looks like all you troubles were for nothing oh well\n')
+        time.sleep(1)
+        print('THE END\n')
+        time.sleep(2)
+    elif choice and hasWaterBottle and hasOnion == 'yes':
+        print('You walk to the Town')
+        time.sleep(2)
+        print('While you walk to the town, you remember your waterbottle and you take a sip.\n')
+        time.sleep(2)
+        print('The town slowly fades away, it turned out to be a mirage.\n')
+        time.sleep(2)
+        print("Aren't you glad you chose the waterbottle, anyways you continue throught the hot desert.\n")
+        time.sleep(2)
+        print('As you walk you feel the ground begin to rumble.\n')
+        time.sleep(2)
+        print('All of a sudden a sandworm leaps over your head, you see a sign that say "Worm Valley"\n')
+        time.sleep(2)
+        print("You now trembling begin to realize the adventure you're taking, but then you rember your goal\n")
+        time.sleep(2)
+        print('You stop your trembling and contiue along the path\n')
+        time.sleep(2)
+        print('As you continue you see your destination in the distance\n')
+        time.sleep(2)
+        print('you walk to the kingdom gates and They notice you have the secret item which was the onion?\n')
+        time.sleep(2)
+        print('I guess the onion did come in handy. Well you made to your goal congrats')
+        time.sleep(2)
+        print('THE END\n')
+        time.sleep(2)
+    elif choice and not hasWaterBottle == 'yes':
+        print('You walk to the Town\n')
+        time.sleep(2)
+        print('You make it to the you thought to yourself its very empty\n')
+        time.sleep(2)
+        print('You see a well, and you rush to it...\n')
+        time.sleep(2)
+        print("it turns out to be a mirage. Really shouldve gotten that waterbottle is what you're thinking now\n")
+        time.sleep(2)
+        print('As the sun sets, you feel the ground starts to rumble\n')
+        time.sleep(2)
+        print('You think nothing of it and continue along the path\n')
+        time.sleep(2)
+        print('You pass out from dehydration and you wake in the stomach of a sandworm')
+        print("should've drunk some water man\n")
+        time.sleep(2)
+        print('THE END\n')
+    elif choice == 'no':
+        print('As the sun sets, you feel the ground starts to rumble\n')
+        time.sleep(2)
+        print('You think nothing of it and continue along the path\n')
+        time.sleep(2)
+        print('You pass out from dehydration and you wake in the stomach of a sandworm')
+        print("should've drunk some water man\n")
+        time.sleep(2)
+        print('THE END\n')
 
 
 playAgain = 'yes'
@@ -121,7 +183,7 @@ while playAgain == 'yes' or playAgain == 'y':
     if chosenPath == '1': #cave
         pathCave()
     else:
-        pathDesert()
+        pathDesert(hasWaterBottle, hasOnion)
         
     print('Do you want to play again? (yes or no)')
     playAgain = input()
