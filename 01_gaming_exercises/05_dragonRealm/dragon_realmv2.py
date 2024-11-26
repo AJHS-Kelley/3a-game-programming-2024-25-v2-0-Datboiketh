@@ -99,7 +99,7 @@ def pathDesert(hasWaterBottle, hasOnion:bool ) -> bool:
     print('You notice a town in the far distance.\n')
     time.sleep(2)
     choice = input('Will you walk to the Town? (yes or no)\n')
-    if choice and hasWaterBottle == 'yes':
+    if choice == 'yes' and hasWaterBottle:
         print('You walk to the Town')
         time.sleep(2)
         print('While you walk to the town, you remember your waterbottle and you take a sip.\n')
@@ -122,7 +122,7 @@ def pathDesert(hasWaterBottle, hasOnion:bool ) -> bool:
         time.sleep(1)
         print('THE END\n')
         time.sleep(2)
-    elif choice and hasWaterBottle and hasOnion == 'yes':
+    elif choice == 'yes' and hasWaterBottle and hasOnion:
         print('You walk to the Town')
         time.sleep(2)
         print('While you walk to the town, you remember your waterbottle and you take a sip.\n')
@@ -135,7 +135,7 @@ def pathDesert(hasWaterBottle, hasOnion:bool ) -> bool:
         time.sleep(2)
         print('All of a sudden a sandworm leaps over your head, you see a sign that say "Worm Valley"\n')
         time.sleep(2)
-        print("You now trembling begin to realize the adventure you're taking, but then you rember your goal\n")
+        print("You start trembling and begin to realize the adventure you're taking, but then you rember your goal\n")
         time.sleep(2)
         print('You stop your trembling and contiue along the path\n')
         time.sleep(2)
@@ -147,7 +147,7 @@ def pathDesert(hasWaterBottle, hasOnion:bool ) -> bool:
         time.sleep(2)
         print('THE END\n')
         time.sleep(2)
-    elif choice and not hasWaterBottle == 'yes':
+    elif choice == 'yes' and  not hasWaterBottle:
         print('You walk to the Town\n')
         time.sleep(2)
         print('You make it to the you thought to yourself its very empty\n')
@@ -165,6 +165,8 @@ def pathDesert(hasWaterBottle, hasOnion:bool ) -> bool:
         time.sleep(2)
         print('THE END\n')
     elif choice == 'no':
+        print('You continue along the path, but its taking longer than intended')
+        time.sleep(2)
         print('As the sun sets, you feel the ground starts to rumble\n')
         time.sleep(2)
         print('You think nothing of it and continue along the path\n')
