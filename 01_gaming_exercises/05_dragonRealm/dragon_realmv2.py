@@ -1,6 +1,8 @@
 # Dragon Realm, <STUDENT_NAME>, v0.0 <-- UPDATE YOUR NAME AND VERSION NUMBER 
 # Based on https://inventwithpython.com/chapter6.html by Al Sweigart
 # Good progress so far, keep going on the project.  
+# Great job Keith!  This was a tough project and you buckled down to complete it.  
+# I hope you find it challenging yet fun to complete. 
 import random, time, datetime
 
 # SAVEING A FILE
