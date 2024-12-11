@@ -83,14 +83,14 @@ def pathCave():
     print('A Dragon apears out of nowhere and...\n')
     time.sleep(2)
 
-    friendlyCave = random.randint(1, 2)
+    evilCave = random.randint(1, 2)
 
-    if chosenPath == str(friendlyCave): # If this is the friendly cave, why am I getting burned to death?
+    if chosenPath == str(evilCave): # If this is the friendly cave, why am I getting burned to death?
         print('Burns you with his fire breath')
 
     else:
         print('Gobbles you down in one bite!')
-    return friendlyCave
+    return evilCave
 
 def pathDesert(hasWaterBottle, hasOnion:bool ) -> bool:
     
